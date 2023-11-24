@@ -5,11 +5,10 @@ The datasets used are the Geoindex and Host Link Graphs which can be downloaded 
 
 **01Bash:**
 * ```MSOA_REG11NM_lookup_bash.sh``` outputs a file called ```MSOA_REG11NM_lookup.csv``` which has a column for MSOA and Region. It uses the file `Output_Area_to_LSOA_to_MSOA_to_Local_Authority_District_(December_2017)_Lookup_with_Area_Classifications_in_Great_Britain.csv` downloaded from: https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2021/about
-* `lookup_bash.sh` takes in `all.1.csv` to get out the host and pc only -- `all.1.csv` is a file from Emmanouil's previous project of all archived websites with one postcode. 
+* `lookup_bash.sh` takes in `all.1.csv` to get out the host and pc only called `host-pc.csv` -- `all.1.csv` is a file from Emmanouil's previous project of all archived websites with one postcode. 
 
 **02DataProcessing**: Script to make lookup table (host/postcode)
-* Uses output from ```lookup_bash.sh``` to make lookup tables, either for just hosts with a BS postcode, or no filter on postcode. Keeps only one unique pc for a host.
-
+* `lookup_all_script.R` uses output `host-pc.csv` to make lookup table called `lookup_all.csv`. Keeps only one unique pc for a host.
 
 **03RScripts**: R scripts to merge 2005 host linkage data for .co.uk to .co.uk with lookup tables
               slow builder for adjacency matrix
