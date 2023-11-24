@@ -1,7 +1,10 @@
 # GB-Hyperlinks_N-S-Divide
 Data and Code Repository to accompany the paper: 'Assessing the North-South Divide in Britain’s Digital Landscape through Stable Dynamic Embedding of Spatial Web Data'. 
 
-The datasets used are the Geoindex and Host Link Graphs which can be downloaded from: `https://data.webarchive.org.uk/opendata/ukwa.ds.2/`. This repository contains the code used to process the files, but not the files themselves. 
+The datasets used are:
+*the Geoindex and Host Link Graphs which can be downloaded from JISC UK Web Domain Dataset: `https://data.webarchive.org.uk/opendata/ukwa.ds.2/`. This repository contains the code used to process the files, but not the files themselves. 
+* ONS postcode lookup, which has many versions that can be downloaded from: https://geoportal.statistics.gov.uk/search?q=postcode%20lookup. (This project accessed a Nov2021 version)
+
 
 **01Bash:**
 * ```MSOA_REG11NM_lookup_bash.sh``` outputs a file called ```MSOA_REG11NM_lookup.csv``` which has a column for MSOA and Region. It uses the file `Output_Area_to_LSOA_to_MSOA_to_Local_Authority_District_(December_2017)_Lookup_with_Area_Classifications_in_Great_Britain.csv` downloaded from: https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2021/about
@@ -10,27 +13,9 @@ The datasets used are the Geoindex and Host Link Graphs which can be downloaded 
 **02DataProcessing**: Script to make lookup table (host/postcode)
 * `lookup_all_script.R` uses output `host-pc.csv` to make lookup table called `lookup_all.csv`. Keeps only one unique pc for a host.
 
-**03RScripts**: R scripts to merge 2005 host linkage data for .co.uk to .co.uk with lookup tables
-              slow builder for adjacency matrix
-                --> just BS or all pcs, very sparse
-                
-* Runs further filters to make sure the links are between 2 ".co.uk" hosts, where only one postcode is attached to each
-* Merges together the lookup file and this file of *links* to get a dataframe which contains 2 hosts, their PCs (for which they have one each), the year of the link, and the number of hyperlinks (this removes a lot of data from the file containing the links. 
-* Can turn this into a sparse adjancency Matrix using a for loop. 
-* Find biggest subgraph from the adjacency matrix, and which nodes are in it. (Also code that could allow you to investigate all the subgraphs in the data).
-* *BS_in_2005.R*, *BS_in_2006.R*, and *BS_in_2007.R* do the same things, but for the ```host-linkage``` data filtered by different years. Here the biggest suubgraph size is very different, also containing different sites. **Is this to do with gaps in the webscrape that created the data? What do we want to do to build up matrices of the same hosts at different time steps?**
-    All the items in the biggest subgraph in 2006 appear in the biggest subgraph in 2007. Nothing from 2005 is common to 2006 or 2007. - see ```big_subgr_commonalities_2005-2007```
-    
-* ```1996-2010_couk_couk_filter.R``` script. Takes in the outputs of zgrep of ```host-linkage.tsv.gz``` file from JISC page where data is filtered by year, and runs the filter in R to get out files that are filtered for year and that both hosts are ".co.uk" websites. It writes output files for each year (15 files) if the script is ran. (Related bash script in *04HPCScripts* folder)
-    (Some edits that need to be put in are in ```BS_in_2005.R``` script, but haven't been added to the ```all_in_2005.R``` script)
-* **LondonLookupTable** folder: contains the NSPL_NOV_2021 csv files for the 8 postcode starters that make up London. Has an R script that can be executed to output a London lookup table, that is all MSOAs and postcodes for London. 
-
-
 **04HPCScripts:** 
-* Script to try and run in HPC. ```MSOA_2005_all.R``` takes in the ```lookup_all.csv``` file of all hosts and postcodes thought to have one PC associated (further filtered in script), the ```2005-co-uk-linkage.csv``` file of semi-filtered 2005 observations of linkages, and the ```NSPL_NOV_2021_UK.csv``` file (downloaded from ONS website). 
-* These are the files needed for the R script to run -- need to figure out how to write to get this to run on BP, currently written as an R script that can't run on a laptop due to memory. The 3 noted files are all in my work directory on BP. 
-* Bug catches in ```MSOA_2005_all.R```, but not in ```MSOA_2005_BS.R```, as the bugs only came up on the large dataset.
-* ```1996-2010_couk_couk_bash.sh``` runs the R script to filter for each year in the linkage data, links between 2 ".co.uk" hosts.
+* `MSOA_1996-2003_2005-2010_filter_couk_couk.sh` runs the R script called `1996-2003_2005-2010_couk_couk_filter.R` to filter for each year in the linkage data, links between 2 ".co.uk" hosts. THe output files take the form `<year>-co-uk-linkage.tsv`.
+  
 * ```MSOA_1996-2010_all.R``` loops through each year from 1996-2010 and looks at the filtered year ".co.uk" to ".co.uk" links and builds and writes out an adjancy matrix for each year. Also prints an output of general summary of the A matrices. 
 **This code makes assymmetric adjacency matrices** - ```MSOA_2005_all.R``` and ```MSOA_2005_BS.R``` DO NOT consider direction
 So here, $a_{ij}$ represents the number of hyperlinks from MSOA[i] to MSOA[j]. $a_{ij}$ and $a_{ji}$ can be (and most likely are) different.
