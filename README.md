@@ -24,7 +24,7 @@ The datasets used are:
 * The data to go from MSOA to LAD (for E&W) comes from: https://geoportal.statistics.gov.uk/datasets/middle-layer-super-output-area-2001-to-middle-layer-super-output-area-2011-to-local-authority-district-2011-lookup-in-england-and-wales/explore and is saved as `MSOA2001_MSOA2011_LAD2011_Lookup_EW.csv`. These files are often updated and renewer version uploaded, but searching "pcd msoa lsoa lad uk" should return the most similar data. 
 
 **14NorthSouthDivide:**
-* **LADS_list.csv** tells you the order of the indexes of the LAD x LAD matrices (the ones created in **folder 12**). 
+* **LADS_list.csv** tells you the order of the indexes of the LAD x LAD matrices (the ones created via the code in **folder 12**). 
 * `simulations.ipynb` runs a model with a SBM of 2 communities. It shows how the permutation tests look when you know what the outcome should look like. This helps to justify the plots, add explainability when we apply these methods to real data (where we do not know the underlying distribution that the nodes come from). The pdf plots in this folder are those generated in this notebook and are found in the Supplementary material Simulated Example.
 * `NorthSouthDivide.ipynb` first contains the code to map the LAD x LAD matrices to Reg x Reg (Reg for region) matrices for E&W. These Region and LAD level matrices can be found in the folder too. There is some additional code that tests code from `simulations.ipynb` on the real data. 
   
@@ -32,7 +32,7 @@ The datasets used are:
 Note: I've called it UK everywhere, but it's actually GB as NI is not included. v5 is binary still, just includes GB. 
 
 * `makeA_LAD_v5_UKincScot.ipynb` takes in the file `PCD_OA_LSOA_MSOA_LAD_FEB20_UK_LU.csv` which was downloaded from a link given in folder 12. The start of the notebook makes this file into a MSOA to LAD lookup table for the UK, which it saves as the file `MSOA_LAD_UK_lookup.csv` which has been saved and then can just be used (this is where it is made). The notebook makes the LADxLAD matrices (v5) for the UK, so Eng, Wales + Scot, using the v4 binary MSOA x MSOA matrices made in **folder 12**.
-* `LADS_list_UK.csv` is a list of all the LADs in E, W & S. `A_LAD_<year>_UK_v5.mtx` are the matrices for the whole UK at LAD x LAD level.
+* `LADS_list_UK.csv` is a list of all the LADs in E, W & S. `A_LAD_<year>_UK_v5.mtx` are the matrices for the whole UK at LAD x LAD level. These are relabelled in the next folder and called `A_LAD_<year>_GB.mtx` to avoid confusion from mislabelling as UK when it is truly GB. `A_LAD_<year>_GB.mtx` is the name of these matrices which is used in all later folders. 
 * `matrixSVD_plots_UK_binaryLog10Wins.R` uses the shp file from: 
 https://geoportal.statistics.gov.uk/datasets/ons::local-authority-districts-december-2016-generalised-clipped-boundaries-in-the-uk-1/explore?location=53.588449%2C-0.820715%2C5.52
 and does the SVD on the v5 A LADxLAD matrices. Makes the "animationData" and saves this as `animationDataUK.csv`. 
@@ -48,29 +48,12 @@ Note: the below file doesn't transform the A matrices, so is not the results rep
 * `permutationTestsGB_ConcWins.ipynb` uses the animation data to do the permutation tests for N/S, U/R, L/nL and plots graphs and outputs the values of the p-values. 
 * `transformationsAPlots_GB_ConcWins.R` generates  plots to show the effects of concatenating then Winsorizing the data for GB.
   
-**17NorthernIrelandData:**
-* `PCD_SOA_NI_lookup_bash.sh` uses the file `ONSPD_AUG_2011_UK_O.csv` to crop it down to the PCD and SOA for Northern Ireland, and outputs this as the file `postcode_SOA_NI_lookup.csv`.
-* SOA for NI is the equivalent for MSOA, so build up a new R script for the HPC to build binary A matrices at the MSOA x MSOA level: `MSOA_UK_2005-2010_makeAdjMatr_binary.R`. There is a bash script to go with this. They are in the *binaryA folder on HPC as existing files were there and additional files needed for NI have been uploaded. Outputs **A_for_<year>_binary_MSOA_UK.mtx**. These will then need to be fed into python script to make LAD x LAD (LGD is the NI equvialent) matrices. 
-* `make_nodes_MSOA_UK_csv_file.R` outputs the file `nodes_MSOA_UK.csv` to use in python script. 
-* `makeA_LAD_v6_UK.ipynb` to convert MSOA level A to LAD level A.  
-* https://www.nisra.gov.uk/publications/11-dc-look-tables-and-guidance-documents table to go SOA to LGD in NI.
-*  `SVD_plots_UK_ConcWins.R` makes animation Data, SVD plots, scree plots, maps filled and outline of the UK.
-* `permutationTestsUK_ConcWins.ipynb` uses the `animationDataUK_ConcWins.csv` data to do the permutation tests. 
-* In NI use data from https://www.ninis2.nisra.gov.uk/public/PivotGrid.aspx?ds=3635&lh=73&yn=2006,2009&sk=10&sn=People%20and%20Places&yearfilter= to classify the LGD2014 (LAD equivalents as U/R), based on the % of Urban dwellings in the LAD. Saved as `urbanDwellingsPercentage_LGD2014_NI.csv`.
-* csv file of *all* permutation tests for different areas and data pre-processing are in the file: `permutationTestPvaluesALL.csv`.
-* `howManyUniqueHostsInHostLinkData2005-2010.R` and `avgNumberWebsitesLinkedToInHostLinkData2005-2010.R` is to find out how many websites are in the subset of the host-link graph data we use for the paper. 
-* `makeA_RegxLAD_UK.ipynb` makes Region x LAD matrices for the UK: **A_RegxLAD_<year>_UK.mtx**.
-* `embedA_regxLAD.ipynb` does an SVD and creates an embedding of these matrices. Tries to output some animations (html) files.
-
 **18Procrustes:**
-* `make_A_LAD_GB.ipynb` crops A_v6_LAD to make them just for the GB.
-* `ProcrustesGB.R` tries to do a Procrustes transformation to the SVD of A (which is given by X), to rotate it and project it into a lower dimension. It uses an iterative algorithm to do this, to try and fit $\tilde{X}$ to G (geography - lat/long). Then uses the $\tilde{X} \in \mathbb{R}^{n \times 2}$ to give the nodes (LADs) a colouring on a 2D heatmap scale, that are based on their $\tilde{X}$ value, and an opacity based on the "connectivity" of the node. Hope that this looks like geography. 
-* `ProcrustesGB_avg.R` is a big improvement on the previous attempt.
 * `ProcrustesGB_X_avg_v2.R` has lots of work in it, makes the plots and does the iterative Procrustes transformation. Does the zoom in on London, as well as doing some X_early and X_late Procrustes transformations. - Think I need to extract this information to then be able to apply the permutation tests on the data. 
-* `Procust_early_late_for_PermTests.R` is a script to procrust the embedding into $C = (long, lat,  no.enterprises, zeros)$. Method (a) procrustes $X_{all average}$ into $C$ to learn the transformation parameters $s, R, tt$. It then uses these values to Procrust $X_{early}$ and $X_{late}$ into $C$. Method (b) does: $X_{early} \in \mathbb{R}^{n \times 4}$ and $X_{late}$ into $C = (long, lat,  no.enterprises, zeros)$. Then export the transformed dataframes as csv files to do some permutation tests on. (24/04/2023) The output csv files are copied into **20** to run permutation tests on them.
+* `Procust_early_late_for_PermTests.R` is a script to procrust the embedding into $C = (long, lat,  no.enterprises, zeros)$. Method (a) procrustes $X_{all average}$ into $C$ to learn the transformation parameters $s, R, tt$. It then uses these values to Procrust $X_{early}$ and $X_{late}$ into $C$. Method (b) does: $X_{early} \in \mathbb{R}^{n \times 4}$ and $X_{late}$ into $C = (long, lat,  no.enterprises, zeros)$. Then export the transformed dataframes as csv files to do some permutation tests on. The output csv files are copied into **20** to run permutation tests on them.
 * `CheckNumberOfLinksPerYear_12Sep2023.ipynb` - plot to show that the number of links is the pattern we see in dim1 of the UASE embedding of the data (Figure 5 in the paper)
-* `Procrust_NS_divide_plots.R` is done (oct2023) to make the plots for the paper wrt the Procrusted Dimensions rather than the embedding dimensions for better reading. `YhatProcrusted_allYears.csv` contains the Procrusted embeddings for each year all stacked into one matrix. 
-* `Procrusted_NS_dividePlots.ipynb` make plot for paper. 
+* `Procrust_NS_divide_plots.R` is done to make the plots for the paper wrt the Procrusted Dimensions rather than the embedding dimensions for better reading. `YhatProcrusted_allYears.csv` contains the Procrusted embeddings for each year all stacked into one matrix. 
+* `Procrusted_NS_dividePlots.ipynb` makes plot for paper. 
 
 **19CorrelationMatrices:**
 * make correlation matrices of embedding X (use avgX - time averaged X matrix), and factors that I think might be correlated (i.e. driving factors) that I have data for about each nodes.
