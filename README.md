@@ -16,41 +16,10 @@ The datasets used are:
 
 **04HPCScripts:** 
 * `MSOA_1996-2003_2005-2010_filter_couk_couk.sh` runs the R script called `1996-2003_2005-2010_couk_couk_filter.R` to filter for each year in the linkage data, links between 2 ".co.uk" hosts. THe output files take the form `<year>-couk-couk-linkage.tsv`.
-* * ```MSOA_2005-2010_make_adjacencyMatrices_v2.sh``` uses the R script ```MSOA_2005-2010_MakeAdjMatr_v2.R``` , which has 2 different filters to remove self-hyperlinks (within the website). It does this by comparing host1 and host2. It outputs A_<year>_v2.mtx files for 2005-2010 inclusive. Changes made the filters in this document on 22/04/2022. This takes the `<year>-couk-couk-linkage.tsv` files and the MSOA-postcode lookup and matches both sides of the *'.co.uk'* to *'.co.uk'* links to an MSOA via their postcode, then aggregates this data by MSOA to output matrices `A_for_<year>_v2.mtx` files, where $A_{ij} represents the number of hyperlinks from MSOA[i] to MSOA[j] -- so these are weighted, directed matrices. Running script also prints an output of general summary of the A matrices to the console. 
-  
-  
-**07SpectralEmbeddingsOfA**:
-* ```UASE_on_A_v2_2005-2010.Rmd``` has initial partial SVD of unfolded A, and a scree plot to go with.
-Then move on to use Python via Jupyter lab!!
-* ```uase_with_ed.ipynb``` does a spectral embedding, and degree correction. It makes plots that are coloured by
-  1. is or is not in London for all data
-  2. for England only, which LEP is the MSOA in 
-* ```UASE_on_A_v2_2005-2010_NUTS.ipynb``` - trying to find a way to colour data for all MSOAs in the dataset.
-  1. By Rural-Urban status (8 factor levels) only for E&W
-  2. By region for all of GB
-  
-**08LAD**:
-* `LAD_level_investigation.ipynb` is a notebook to explore the outwards A matrices that are at a LAD x LAD level. See whether embeddings work at this granularity. Also a bit of incomplete workings to do with embedding the Reg x LAD matrices.
-* `DanCode_plusExtra.R` is some code that uses a dendrogram and hierarchical clustering to order the LADs for the heatmap plots. If you add the 6 A matrices for all years together to make a "mean" matrix and take the transform $(A + A^T)/2$ for the "mean" matrix, you can see small clusters appear along the diagonal. It also outputs some plots from running an svd on the matrices and the "mean" matrix, which show geographical structure in some ways. 
-* Folder contains animations of the LAD x LAD embeddings, and lots of the heatmaps which are appropriately labelled. 
-* The heatmaps for each year highlight some LADs in 2005, 2006, and 2008 seem overtly highly connected, so investigating these is in **09**. 
-  
-**09OddLADInvestigation**:
-* `Odd_LAD_explore.ipynb` and `oddLADexplore.R` - using both at the same time to try and get to the root of causes of the highly outwardly connected LADs seen in some years. Start with 2006, where Wolverhampton and Leicester are highly connected. 
-* `potential_odd_websites2006.csv` contains all the websites and the Postcodes that could be weird, so that this can be joined with the `2006-couk-couk-linkage.tsv` file to find out. 
-* `potential_odd_hyperlinks2006_HPC.R` and the `.sh` file are to run the join in HPC and output a csv file of all the hyperlink data entries that are associated with host1 being in the Wolverhampton or Leicester LAD. 
-* `<year>_topXXOddHyperlinks.csv` comes from `oddHyperlinkRxplore<year>.R` script, and looks at the top XX odd websites. The csv files are to use with `oddLADexplore.R where it is noted which postcodes are odd.
-* `oddHyperlinks_whereTo.R` is a script to find all the raw data lines (from the hyperlinks data stored in the **<year>-couk-couk** files), where the host1 is potentially odd, to allow visual examination of the host2 they are linking to, to understand if they are legitimate, and what is going on. Uses the **potential_odd_hyperlinks<year>.csv** files and filters these. 
-  
-**10LADDegreeDistributions:**
-* `histograms2005-2010.R` just experiment plotting the values of the **number of hyperlinks** between sites on a histogram. The point is to see at what maximum values cutting off the top XX% helps. 
-* The *1PC* files are more useful, as this just looks at the observations in the raw data that go towards to A matrices (which are for 1PC only).
-  
-**11LADEmbeddingsCroppedData:**
-* Makes A_LAD matrices, that have had the top 0.01% of highest number of hyperlinks observations (per year) removed from the raw data, before they are aggregated to adjacency matrices. This is **version3**.
+* * ```MSOA_2005-2010_make_adjacencyMatrices_v2.sh``` uses the R script ```MSOA_2005-2010_MakeAdjMatr_v2.R``` , which has 2 different filters to remove self-hyperlinks (within the website). It does this by comparing host1 and host2. It outputs A_<year>_v2.mtx files for 2005-2010 inclusive. Changes made the filters in this document on 22/04/2022. This takes the `<year>-couk-couk-linkage.tsv` files and the MSOA-postcode lookup and matches both sides of the *'.co.uk'* to *'.co.uk'* links to an MSOA via their postcode, then aggregates this data by MSOA to output matrices `A_for_<year>_v2.mtx` files, where $A_{ij} represents the number of hyperlinks from MSOA[i] to MSOA[j] -- so these are weighted, directed matrices. Running script also prints an output of general summary of the A matrices to the console. These matrices represent **how many hyperlinks between MSOAs** - see folder 12 for what we go on to use. 
   
 **12BinaryHyperlinkConnections:**
-* Here, instead of caring and aggregating **how many hyperlinks between places**, we are making matrices of **how many website to website connections between places** are there. This means replacing the *# hyperlinks* by a 1 if non-zero and a 0 if zero, to make an adjacency matrix. Can think of this as taking the huge adj. matrix of website level and replacing all non-zero values with a 1. Then they are aggregated to MSOA and then LAD level by summing. `MSOA_2005-2010_makeAdjMatr_binary.R` does this, then there is a Python script `makeA_LAD_binary.ipynb`, that aggregates the MSOA level matrix to LAD level. (Also Winsorizing the matrices and log10 on them is done). This makes **version 4 of the MSOA x MSOA matrices**.
+* Here, instead of aggregating **how many hyperlinks between places**, we are making matrices of **how many website to website connections between places** are there. This means replacing the *# hyperlinks* by a 1 if non-zero and a 0 if zero, to make an adjacency matrix. Can think of this as taking the huge adj. matrix of website level and replacing all non-zero values with a 1. Then they are aggregated to MSOA and then LAD level by summing. `MSOA_2005-2010_makeAdjMatr_binary.R` does this, then there is a Python script `makeA_LAD_binary.ipynb`, that aggregates the MSOA level matrix to LAD level. (Also Winsorizing the matrices and log10 on them is done). This makes **version 4 of the MSOA x MSOA matrices**.
 * Histograms of various degree distributions, from log10 scale, to adding also Winsorization at (0, 0.99) level. Heatmaps of the degree distributions also. These help to indentify appropriate transformations of the data to make less heavy tailed.
 * There is then `2D_colourmap_reference.pdf` which shows a 2D rgb scale that E&W LADs are then matched to by geography: `FilledMapLADS_E_W.pdf`.
 * Assortment of SVD (embedding) plots then, where titles suggest transformations and the points are labelled by geography. Also a scree plot to see appropriate number of dimensions to consider.
