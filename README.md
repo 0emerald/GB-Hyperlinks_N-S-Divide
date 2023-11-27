@@ -63,8 +63,8 @@ Note: the below file doesn't transform the A matrices, so is not the results rep
 * `permTests_methodA.ipynb` runs permutation tests on the method A way of obtaining the $X_{early}$ and $X_{late}$ Procrusted embeddings. 
 
 **21RobustnessSimulations:**
-* `robustnessSimulations.ipynb` Need some appendix simulation that shows log and Winsorizing make the method more robust (I think this is that the permutation test is more robust) -i.e. show it works via an example. Consider a student $t$-distribution for heavy tailed data, show difference in the power of the test. Show robustness.
-* `robustnessSimulations_taake2.ipynb` - these have new code rather than trying to reuse the old code. This is the code and results for the paper. Use a KS test to see if transforming the data makes the p-values a closer fit to the Unif[0,1] distribution they should follow.
+* `robustnessSimulations.ipynb` contains the simulations given in the Appendix that shows log and Winsorizing make the method more robust (this is that the permutation test is more robust) -i.e. show it works via an example. Consider a student $t$-distribution for heavy tailed data, show difference in the power of the test. Show robustness.
+* `robustnessSimulations_taake2.ipynb` - contains the simulations given in the Appendix that shows log and Winsorizing make the method more robust (this is that the permutation test is more robust) -i.e. show it works via an example. Consider a student $t$-distribution for heavy tailed data, show difference in the power of the test. This is the code and results for the paper. Use a KS test to see if transforming the data makes the p-values a closer fit to the Unif[0,1] distribution they should follow.
 
 **22AggregrationJustifications:**
 * Want to justify that aggregating itself and the choice of level of aggregation are justified. Probably won't do at the website level for now, just becuase it is so computationally expensive. Going to use $Z$ scores to assess at the MSOA, LAD, and region level.
