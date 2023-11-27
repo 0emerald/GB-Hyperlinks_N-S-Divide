@@ -9,6 +9,7 @@ The datasets used are:
 **01Bash:**
 * ```MSOA_REG11NM_lookup_bash.sh``` outputs a file called ```MSOA_REG11NM_lookup.csv``` which has a column for MSOA and Region. It uses the file `Output_Area_to_LSOA_to_MSOA_to_Local_Authority_District_(December_2017)_Lookup_with_Area_Classifications_in_Great_Britain.csv` downloaded from: https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2021/about
 * The same file from the ONS is used to make a postcode (pcds) to MSOA (msoa11) lookup, and is done via the script `MSOA_all_nov2021_bash.sh` and the output is called `MSOA_UK_nov2021.csv`.
+* `filter1PC.R` takes in the *.tsv* files downloaded from the Geoindex files at https://data.webarchive.org.uk/opendata/ukwa.ds.2/ and filters them for hosts with one postcode associated and saves as `all.1.csv`. 
 * `lookup_bash.sh` takes in `all.1.csv` to get out the host and pc only called `lookup_all.csv` -- `all.1.csv` is a file from Emmanouil's previous project of all archived websites with one postcode. 
 
 **02DataProcessing**: Script to make lookup table (host/postcode)
