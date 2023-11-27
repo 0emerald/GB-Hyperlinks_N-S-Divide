@@ -2,10 +2,8 @@
 Data and Code Repository to accompany the paper: 'Assessing the North-South Divide in Britain’s Digital Landscape through Stable Dynamic Embedding of Spatial Web Data'. 
 
 The datasets used are:
-*the Geoindex and Host Link Graphs which can be downloaded from JISC UK Web Domain Dataset: `https://data.webarchive.org.uk/opendata/ukwa.ds.2/`. This repository contains the code used to process the files, but not the files themselves. 
-* ONS postcode lookup, which has many versions that can be downloaded from: https://geoportal.statistics.gov.uk/search?q=postcode%20lookup. (This project accessed a Nov2021 version)
-* ONS file which tells you which Local Authority District (LAD) and Region each Middle Layer Super Output Area (MSOA) belongs to. This was accessed on 22-05-2022 at https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2021/about. 
-
+*the Geoindex and Host Link Graphs which can be downloaded from JISC UK Web Domain Dataset: https://data.webarchive.org.uk/opendata/ukwa.ds.2/. This repository contains the code used to process the files, but not the files themselves. 
+* ONS postcode lookup, which has many versions that can be downloaded from: https://geoportal.statistics.gov.uk/search?q=postcode%20lookup. (This project accessed a Nov2021 version on 22-05-2022 via: https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2021/about). Tfile which tells you which Local Authority District (LAD) and Region each Middle Layer Super Output Area (MSOA) belongs to, and which postcodes belong to which MSOA. 
 
 **01Bash:**
 * ```MSOA_REG11NM_lookup_bash.sh``` outputs a file called ```MSOA_REG11NM_lookup.csv``` which has a column for MSOA and Region. It uses the file `Output_Area_to_LSOA_to_MSOA_to_Local_Authority_District_(December_2017)_Lookup_with_Area_Classifications_in_Great_Britain.csv` downloaded from: https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2021/about
