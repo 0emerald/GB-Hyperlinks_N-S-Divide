@@ -53,7 +53,8 @@ Note: the below file doesn't transform the A matrices, so is not the results rep
 * `Procust_early_late_for_PermTests.R` is a script to procrust the embedding into $C = (long, lat,  no.enterprises, zeros)$. Method (a) procrustes $X_{all average}$ into $C$ to learn the transformation parameters $s, R, tt$. It then uses these values to Procrust $X_{early}$ and $X_{late}$ into $C$. Method (b) does: $X_{early} \in \mathbb{R}^{n \times 4}$ and $X_{late}$ into $C = (long, lat,  no.enterprises, zeros)$. Then export the transformed dataframes as csv files to do some permutation tests on. The output csv files are copied into **20** to run permutation tests on them.
 * `CheckNumberOfLinksPerYear_12Sep2023.ipynb` - plot to show that the number of links is the pattern we see in dim1 of the UASE embedding of the data (Figure 5 in the paper)
 * `Procrust_NS_divide_plots.R` is done to make the plots for the paper wrt the Procrusted Dimensions rather than the embedding dimensions for better reading. `YhatProcrusted_allYears.csv` contains the Procrusted embeddings for each year all stacked into one matrix. 
-* `Procrusted_NS_dividePlots.ipynb` makes plot for paper. 
+* `Procrusted_NS_dividePlots.ipynb` makes plot for paper.
+* `ProcrustedEmbedding_<year>.csv` are $n \times d$ dataframes of each year of LAD level data that have been Procrusted as described. 
 
 **19CorrelationMatrices:**
 * make correlation matrices of embedding X (use avgX - time averaged X matrix), and factors that I think might be correlated (i.e. driving factors) that I have data for about each nodes.
