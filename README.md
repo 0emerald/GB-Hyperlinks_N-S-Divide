@@ -15,14 +15,8 @@ The datasets used are:
 * `lookup_all_script.R` uses output `host-pc.csv` to make lookup table called `lookup_all.csv`. Keeps only one unique pc for a host.
 
 **04HPCScripts:** 
-* `MSOA_1996-2003_2005-2010_filter_couk_couk.sh` runs the R script called `1996-2003_2005-2010_couk_couk_filter.R` to filter for each year in the linkage data, links between 2 ".co.uk" hosts. THe output files take the form `<year>-co-uk-linkage.tsv`.
-* `MSOA_1996-2003_2005-2010_makeAdjMatr.R` is ran via a bash script (`MSOA_1996-2003_2005-2010_make_adjacencyMatrices.sh`). This takes the 
-  
-* ```MSOA_1996-2010_all.R``` loops through each year from 1996-2010 and looks at the filtered year ".co.uk" to ".co.uk" links and builds and writes out an adjancy matrix for each year. Also prints an output of general summary of the A matrices. 
-**This code makes assymmetric adjacency matrices** - ```MSOA_2005_all.R``` and ```MSOA_2005_BS.R``` DO NOT consider direction
-So here, $a_{ij}$ represents the number of hyperlinks from MSOA[i] to MSOA[j]. $a_{ij}$ and $a_{ji}$ can be (and most likely are) different.
-* ```MSOA_1996-2010_make_adjacencyMatrices.sh``` will run the R script to output an adjacency matrix for each year at MSOA level. In slurm output should hopefully get some generic info about the A matrices. 
-* ```MSOA_2005-2010_make_adjacencyMatrices_v2.sh``` uses the R script ```MSOA_2005-2010_MakeAdjMatr_v2.R``` , which has 2 different filters to remove self-hyperlinks (within the website). It does this by comparing host1 and host2, and then it has a function to extract what I think is the website, i.e. "bbc" in *www.images.bbc.co.uk* for example. It outputs A_<year>_v2.mtx files for 2005-2010 inclusive. Changes made the filters in this document on 22/04/2022. 
+* `MSOA_1996-2003_2005-2010_filter_couk_couk.sh` runs the R script called `1996-2003_2005-2010_couk_couk_filter.R` to filter for each year in the linkage data, links between 2 ".co.uk" hosts. THe output files take the form `<year>-couk-couk-linkage.tsv`.
+* * ```MSOA_2005-2010_make_adjacencyMatrices_v2.sh``` uses the R script ```MSOA_2005-2010_MakeAdjMatr_v2.R``` , which has 2 different filters to remove self-hyperlinks (within the website). It does this by comparing host1 and host2. It outputs A_<year>_v2.mtx files for 2005-2010 inclusive. Changes made the filters in this document on 22/04/2022. This takes the `<year>-couk-couk-linkage.tsv` files and the MSOA-postcode lookup and matches both sides of the *'.co.uk'* to *'.co.uk'* links to an MSOA via their postcode, then aggregates this data by MSOA to output matrices `A_for_<year>.mtx` files, where $A_{ij} represents the number of hyperlinks from MSOA[i] to MSOA[j] -- so these are weighted, directed matrices. Running script also prints an output of general summary of the A matrices to the console. 
 
 **05AdjMatrices:**
 * contains the A (adjacency matrices) for 1996-2010.
