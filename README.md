@@ -17,19 +17,6 @@ The datasets used are:
 **04HPCScripts:** 
 * `MSOA_1996-2003_2005-2010_filter_couk_couk.sh` runs the R script called `1996-2003_2005-2010_couk_couk_filter.R` to filter for each year in the linkage data, links between 2 ".co.uk" hosts. THe output files take the form `<year>-couk-couk-linkage.tsv`.
 * * ```MSOA_2005-2010_make_adjacencyMatrices_v2.sh``` uses the R script ```MSOA_2005-2010_MakeAdjMatr_v2.R``` , which has 2 different filters to remove self-hyperlinks (within the website). It does this by comparing host1 and host2. It outputs A_<year>_v2.mtx files for 2005-2010 inclusive. Changes made the filters in this document on 22/04/2022. This takes the `<year>-couk-couk-linkage.tsv` files and the MSOA-postcode lookup and matches both sides of the *'.co.uk'* to *'.co.uk'* links to an MSOA via their postcode, then aggregates this data by MSOA to output matrices `A_for_<year>_v2.mtx` files, where $A_{ij} represents the number of hyperlinks from MSOA[i] to MSOA[j] -- so these are weighted, directed matrices. Running script also prints an output of general summary of the A matrices to the console. 
-
-**05AdjMatrices:**
-* contains the A (adjacency matrices) for 1996-2010.
-* Script ```EDA_on_A_matrices.R``` which goes through the A matrices (as A(i,j)+A(j,i) to symmetrise), and sees some things about the connected components.
-* frequency tables, and largest connected component csv files - tell you information about these graphs. 2004 data so large it is omitted in most work in this section. Can find nice summaries. File includes plots of the LCC in each year. 
-* Can see histograms of how many of the 14 LCCs for 1996-2003_2005-2010 an MSOA appears in. Also made a histogram for 2005-2010.
-* The LCC for 2005-2010 contains more than half the nodes in the graph for all 6 of these years. 
-* ```MSOA_node_table.R``` script output a csv file called *nodes_MSOA.csv* of MSOA and index (which maps an MSOA to the index of the A matrices).
-
-**06Maps**:
-* ```EDA_A_outgoing_2005-2010_map.Rmd``` takes in the A matrices, and formats into a vector of "how many outgoing hyperlinks from each MSOA". Then this is used with a MSOA ```geojson``` shapefile, to plot these values on a map (images of such are in folder). Then want to put into a hexagon shaped cartogram, to try and display this data in an easily interpretable way.
-* ```check_hyperlinks_values.Rmd```: could see that some values in A matrices were very large. This investigates this, and highlights the majority of entries in A that are large are within an MSOA. This leads to a **v2** A matrices script in the **04HPCScripts** folder, that removes any data entries between a host and themselves. I will see if this is sufficient and reasonable. 20/04/2022 - also want to consider a self-defined cap on the largest value for number of hyperlinks in the data, before we exclude the data entry, as we think it is a directory like site in the data. 
-* ```EDA_A_London_2005-2010.Rmd```. Want to subset the A matrices data into just MSOAs that are in *London*, and make similar plots as for the whole of E&W (map by MSOA and a hex map), as well as a plot that shows where the links are going to for a given MSOA. 
   
   
 **07SpectralEmbeddingsOfA**:
