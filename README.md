@@ -8,6 +8,7 @@ The datasets used are:
 
 **01Bash:**
 * ```MSOA_REG11NM_lookup_bash.sh``` outputs a file called ```MSOA_REG11NM_lookup.csv``` which has a column for MSOA and Region. It uses the file `Output_Area_to_LSOA_to_MSOA_to_Local_Authority_District_(December_2017)_Lookup_with_Area_Classifications_in_Great_Britain.csv` downloaded from: https://geoportal.statistics.gov.uk/datasets/national-statistics-postcode-lookup-november-2021/about
+* The same file from the ONS is used to make a postcode (pcds) to MSOA (msoa11) lookup, and is done via the script `MSOA_all_nov2021_bash.sh` and the output is called `MSOA_UK_nov2021.csv`.
 * `lookup_bash.sh` takes in `all.1.csv` to get out the host and pc only called `host-pc.csv` -- `all.1.csv` is a file from Emmanouil's previous project of all archived websites with one postcode. 
 
 **02DataProcessing**: Script to make lookup table (host/postcode)
@@ -15,6 +16,7 @@ The datasets used are:
 
 **04HPCScripts:** 
 * `MSOA_1996-2003_2005-2010_filter_couk_couk.sh` runs the R script called `1996-2003_2005-2010_couk_couk_filter.R` to filter for each year in the linkage data, links between 2 ".co.uk" hosts. THe output files take the form `<year>-co-uk-linkage.tsv`.
+* `MSOA_1996-2003_2005-2010_makeAdjMatr.R` is ran via a bash script (`MSOA_1996-2003_2005-2010_make_adjacencyMatrices.sh`). This takes the 
   
 * ```MSOA_1996-2010_all.R``` loops through each year from 1996-2010 and looks at the filtered year ".co.uk" to ".co.uk" links and builds and writes out an adjancy matrix for each year. Also prints an output of general summary of the A matrices. 
 **This code makes assymmetric adjacency matrices** - ```MSOA_2005_all.R``` and ```MSOA_2005_BS.R``` DO NOT consider direction
