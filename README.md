@@ -37,8 +37,8 @@ Note: I've called it UK everywhere, but it's actually GB as NI is not included. 
 https://geoportal.statistics.gov.uk/datasets/ons::local-authority-districts-december-2016-generalised-clipped-boundaries-in-the-uk-1/explore?location=53.588449%2C-0.820715%2C5.52
 and does the SVD on the v5 A LADxLAD matrices. Makes the "animationData" and saves this as `animationDataUK.csv`. 
 Second part of the `R` script makes plots: scree plots, 2D reference map plots, embedding plots. 
-* `permutationTestsUK.ipynb` script to run permuation tests for GB. (Also has code to output a `LAD_NorthIndicator_GB_lookup.csv` file, which is copied into *18* and used there)
-* `animations.ipynb` makes some animation data, does some plots of the count of active enterprises data, and outputs the CLEAN version of the active ent data (which is copied to 18 and used in the 1dim Procrustes stuff).
+Note: the below file doesn't transform the A matrices, so is not the results reported in the paper, but is kept as it outputs a file used in **folder 18**
+* `permutationTestsUK.ipynb` script to run permuation tests for GB. (Also has code to output a `LAD_NorthIndicator_GB_lookup.csv` file, which is copied into **folder 18** and used there)
   
 **15-1 WinsorizationPoint:**
 * `Winsorizing_beforeAfter_concatenation.R` implements a distance measure for the embeddings and compares for concatenating then Winsorizing and vice versa.
@@ -46,7 +46,7 @@ Second part of the `R` script makes plots: scree plots, 2D reference map plots, 
 **16GB_ConcThenWins:**
 * `matrixSVD_plots_UK_binaryLog10ConcWins.R` file takes in the LAD level A matrices, then concatenates, logs, then Winsorizes. Then does SVD to calculate embedding, and makes some plots of the embedding and a scree plot, and the file `animationDataGB_ConcWins.csv`.
 * `permutationTestsGB_ConcWins.ipynb` uses the animation data to do the permutation tests for N/S, U/R, L/nL and plots graphs and outputs the values of the p-values. 
-* `transformationsAPlots_GB_ConcWins.R` generates similar plots to the **12** file, but does for when we conc then Wins the data, and for GB not just E&W.
+* `transformationsAPlots_GB_ConcWins.R` generates  plots to show the effects of concatenating then Winsorizing the data for GB.
   
 **17NorthernIrelandData:**
 * `PCD_SOA_NI_lookup_bash.sh` uses the file `ONSPD_AUG_2011_UK_O.csv` to crop it down to the PCD and SOA for Northern Ireland, and outputs this as the file `postcode_SOA_NI_lookup.csv`.
