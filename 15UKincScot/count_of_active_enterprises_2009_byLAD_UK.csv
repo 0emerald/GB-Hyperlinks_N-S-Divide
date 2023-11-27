@@ -1,0 +1,381 @@
+"LAD","count of active enterprises"
+"        County Durham UA",12490
+"        Darlington UA",3005
+"        Hartlepool UA",2030
+"        Middlesbrough UA",2800
+"        Northumberland UA",9590
+"        Redcar and Cleveland UA",2865
+"        Stockton-on-Tees UA",4935
+"            Gateshead",5175
+"            Newcastle upon Tyne",7545
+"            North Tyneside",4580
+"            South Tyneside",2895
+"            Sunderland",5750
+"        Blackburn with Darwen UA",4545
+"        Blackpool UA",4500
+"        Cheshire East UA",17460
+"        Cheshire West and Chester UA",12390
+"        Halton UA",3210
+"        Warrington UA",7260
+"            Allerdale",3610
+"            Barrow-in-Furness",1960
+"            Carlisle",3860
+"            Copeland",2125
+"            Eden",2625
+"            South Lakeland",5790
+"            Bolton",9300
+"            Bury",6680
+"            Manchester",15715
+"            Oldham",6485
+"            Rochdale",6185
+"            Salford",7255
+"            Stockport",11755
+"            Tameside",6165
+"            Trafford",10345
+"            Wigan",8575
+"            Burnley",2565
+"            Chorley",4240
+"            Fylde",3425
+"            Hyndburn",2515
+"            Lancaster",4420
+"            Pendle",2795
+"            Preston",5215
+"            Ribble Valley",2925
+"            Rossendale",2645
+"            South Ribble",4060
+"            West Lancashire",4115
+"            Wyre",4080
+"            Knowsley",2685
+"            Liverpool",12205
+"            St. Helens",4250
+"            Sefton",7780
+"            Wirral",8380
+"        East Riding of Yorkshire UA",12325
+"        Kingston upon Hull, City of UA",6275
+"        North East Lincolnshire UA",5300
+"        North Lincolnshire UA",5250
+"        York UA",6385
+"            Craven",2840
+"            Hambleton",4085
+"            Harrogate",7920
+"            Richmondshire",2075
+"            Ryedale",2675
+"            Scarborough",3940
+"            Selby",3130
+"            Barnsley",5875
+"            Doncaster",7555
+"            Rotherham",6480
+"            Sheffield",15300
+"            Bradford",14700
+"            Calderdale",7600
+"            Kirklees",13900
+"            Leeds",24315
+"            Wakefield",8900
+"        Derby UA",6930
+"        Leicester UA",9740
+"        Nottingham UA",8240
+"        Rutland UA",1765
+"            Amber Valley",4350
+"            Bolsover",2010
+"            Chesterfield",3360
+"            Derbyshire Dales",4145
+"            Erewash",3730
+"            High Peak",3715
+"            North East Derbyshire",3235
+"            South Derbyshire",3360
+"            Blaby",3575
+"            Charnwood",5760
+"            Harborough",4485
+"            Hinckley and Bosworth",4195
+"            Melton",2075
+"            North West Leicestershire",3930
+"            Oadby and Wigston",1790
+"            Boston",1970
+"            East Lindsey",5050
+"            Lincoln",2615
+"            North Kesteven",3670
+"            South Holland",3030
+"            South Kesteven",5525
+"            West Lindsey",3220
+"            Corby",1615
+"            Daventry",4055
+"            East Northamptonshire",3600
+"            Kettering",3285
+"            Northampton",7220
+"            South Northamptonshire",4645
+"            Wellingborough",3080
+"            Ashfield",3000
+"            Bassetlaw",3705
+"            Broxtowe",3215
+"            Gedling",3450
+"            Mansfield",2715
+"            Newark and Sherwood",4405
+"            Rushcliffe",4660
+"        Herefordshire UA",8305
+"        Shropshire UA",13020
+"        Stoke-on-Trent UA",6280
+"        Telford and Wrekin UA",4845
+"            Cannock Chase",3545
+"            East Staffordshire",4145
+"            Lichfield",4545
+"            Newcastle-under-Lyme",3585
+"            South Staffordshire",4075
+"            Stafford",4795
+"            Staffordshire Moorlands",3460
+"            Tamworth",2375
+"            North Warwickshire",2800
+"            Nuneaton and Bedworth",3490
+"            Rugby",3960
+"            Stratford-on-Avon",7625
+"            Warwick",7160
+"            Birmingham",30840
+"            Coventry",8630
+"            Dudley",10085
+"            Sandwell",7815
+"            Solihull",7620
+"            Walsall",7520
+"            Wolverhampton",6930
+"            Bromsgrove",4560
+"            Malvern Hills",3805
+"            Redditch",2865
+"            Worcester",3175
+"            Wychavon",5930
+"            Wyre Forest",3765
+"        Bedford UA",6120
+"        Central Bedfordshire UA",11395
+"        Luton UA",5290
+"        Peterborough UA",5770
+"        Southend-on-Sea UA",6740
+"        Thurrock UA",4505
+"            Cambridge",4655
+"            East Cambridgeshire",3645
+"            Fenland",3250
+"            Huntingdonshire",7250
+"            South Cambridgeshire",7345
+"            Basildon",6280
+"            Braintree",6420
+"            Brentwood",3745
+"            Castle Point",3155
+"            Chelmsford",6925
+"            Colchester",6850
+"            Epping Forest",6955
+"            Harlow",2445
+"            Maldon",3325
+"            Rochford",3290
+"            Tendring",4385
+"            Uttlesford",4965
+"            Broxbourne",3895
+"            Dacorum",7300
+"            East Hertfordshire",7615
+"            Hertsmere",5670
+"            North Hertfordshire",6395
+"            St Albans",8605
+"            Stevenage",2730
+"            Three Rivers",4635
+"            Watford",3860
+"            Welwyn Hatfield",4430
+"            Breckland",4655
+"            Broadland",4645
+"            Great Yarmouth",3120
+"            King's Lynn and West Norfolk",4995
+"            North Norfolk",4100
+"            Norwich",4590
+"            South Norfolk",5000
+"            Babergh",3990
+"            Forest Heath",2325
+"            Ipswich",3930
+"            Mid Suffolk",4360
+"            St Edmundsbury",4395
+"            Suffolk Coastal",5240
+"            Waveney",3745
+"            Camden",25175
+"            City of London",14895
+"            Hackney",11230
+"            Hammersmith and Fulham",11850
+"            Haringey",9315
+"            Islington",14010
+"            Kensington and Chelsea",12335
+"            Lambeth",11360
+"            Lewisham",7635
+"            Newham",6160
+"            Southwark",13240
+"            Tower Hamlets",11880
+"            Wandsworth",15270
+"            Westminster",47010
+"            Barking and Dagenham",3895
+"            Barnet",19920
+"            Bexley",6900
+"            Brent",12475
+"            Bromley",12880
+"            Croydon",12090
+"            Ealing",14150
+"            Enfield",10490
+"            Greenwich",6695
+"            Harrow",11050
+"            Havering",8100
+"            Hillingdon",10090
+"            Hounslow",10090
+"            Kingston upon Thames",7620
+"            Merton",8800
+"            Redbridge",9435
+"            Richmond upon Thames",12170
+"            Sutton",6915
+"            Waltham Forest",7185
+"        Bracknell Forest UA",4505
+"        Brighton and Hove UA",12360
+"        Isle of Wight UA",4860
+"        Medway UA",7320
+"        Milton Keynes UA",10275
+"        Portsmouth UA",5730
+"        Reading UA",5945
+"        Slough UA",4415
+"        Southampton UA",6255
+"        West Berkshire UA",8475
+"        Windsor and Maidenhead UA",8950
+"        Wokingham UA",7590
+"            Aylesbury Vale",8840
+"            Chiltern",5895
+"            South Bucks",5020
+"            Wycombe",9315
+"            Eastbourne",3230
+"            Hastings",2725
+"            Lewes",4295
+"            Rother",3965
+"            Wealden",8105
+"            Basingstoke and Deane",6975
+"            East Hampshire",6440
+"            Eastleigh",4995
+"            Fareham",4450
+"            Gosport",2040
+"            Hart",4830
+"            Havant",4070
+"            New Forest",7860
+"            Rushmoor",3280
+"            Test Valley",5335
+"            Winchester",6650
+"            Ashford",5400
+"            Canterbury",5030
+"            Dartford",3280
+"            Dover",3140
+"            Gravesham",3100
+"            Maidstone",6770
+"            Sevenoaks",6385
+"            Shepway",3565
+"            Swale",4460
+"            Thanet",3630
+"            Tonbridge and Malling",5295
+"            Tunbridge Wells",6045
+"            Cherwell",6330
+"            Oxford",4470
+"            South Oxfordshire",7710
+"            Vale of White Horse",5450
+"            West Oxfordshire",5555
+"            Elmbridge",8130
+"            Epsom and Ewell",3245
+"            Guildford",7295
+"            Mole Valley",5335
+"            Reigate and Banstead",6425
+"            Runnymede",4165
+"            Spelthorne",4060
+"            Surrey Heath",4675
+"            Tandridge",4635
+"            Waverley",7840
+"            Woking",4645
+"            Adur",2290
+"            Arun",5345
+"            Chichester",6295
+"            Crawley",2970
+"            Horsham",6965
+"            Mid Sussex",6820
+"            Worthing",3850
+"        Bath and North East Somerset UA",7745
+"        Bournemouth UA",6530
+"        Bristol City of UA",15650
+"        Cornwall UA",20240
+"        Isles of Scilly UA",160
+"        North Somerset UA",7895
+"        Plymouth UA",5945
+"        Poole UA",6250
+"        South Gloucestershire UA",9050
+"        Swindon UA",6050
+"        Torbay UA",4435
+"        Wiltshire UA",19915
+"            East Devon",5530
+"            Exeter",4045
+"            Mid Devon",3385
+"            North Devon",4015
+"            South Hams",4370
+"            Teignbridge",5235
+"            Torridge",2465
+"            West Devon",2315
+"            Christchurch",1945
+"            East Dorset",4510
+"            North Dorset",2970
+"            Purbeck",2015
+"            West Dorset",4730
+"            Weymouth and Portland",1940
+"            Cheltenham",5045
+"            Cotswold",5255
+"            Forest of Dean",3420
+"            Gloucester",3435
+"            Stroud",5375
+"            Tewkesbury",3430
+"            Mendip",5165
+"            Sedgemoor",4400
+"            South Somerset",6435
+"            Taunton Deane",4295
+"            West Somerset",1470
+"        Isle of Anglesey",2065
+"        Gwynedd",4500
+"        Conwy",3905
+"        Denbighshire",3260
+"        Flintshire",4795
+"        Wrexham",3880
+"        Powys",6070
+"        Ceredigion",3030
+"        Pembrokeshire",4790
+"        Carmarthenshire",6170
+"        Swansea",6580
+"        Neath Port Talbot",3120
+"        Bridgend",3755
+"        The Vale of Glamorgan",3895
+"        Cardiff",10285
+"        Rhondda Cynon Taff",5125
+"        Merthyr Tydfil",1140
+"        Caerphilly",3725
+"        Blaenau Gwent",1255
+"        Torfaen",2110
+"        Monmouthshire",3840
+"        Newport",3830
+"        Aberdeen City","8,035"
+"        Aberdeenshire","10,120"
+"        Angus","3,215"
+"        Argyll & Bute","3,370"
+"        Clackmannanshire","1,115"
+"        Dumfries & Galloway","4,755"
+"        Dundee City","3,185"
+"        East Ayrshire","2,705"
+"        East Dunbartonshire","2,755"
+"        East Lothian","2,615"
+"        East Renfrewshire","2,375"
+"        Edinburgh  City of","16,195"
+"        Eilean Siar",900
+"        Falkirk","3,375"
+"        Fife","8,535"
+"        Glasgow City","17,290"
+"        Highland","8,710"
+"        Inverclyde","1,635"
+"        Midlothian","2,070"
+"        Moray","2,545"
+"        North Ayrshire","2,995"
+"        North Lanarkshire","6,660"
+"        Orkney Islands",815
+"        Perth & Kinross","5,225"
+"        Renfrewshire","4,345"
+"        Scottish Borders  The","4,115"
+"        Shetland Islands",850
+"        South Ayrshire","3,250"
+"        South Lanarkshire","7,995"
+"        Stirling","3,435"
+"        West Dunbartonshire","1,620"
+"        West Lothian","4,120"

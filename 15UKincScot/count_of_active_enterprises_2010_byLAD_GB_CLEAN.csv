@@ -1,0 +1,381 @@
+,LAD,count of active enterprises,LAD_clean
+0,        County Durham UA,12300,County Durham
+1,        Darlington UA,3005,Darlington
+2,        Hartlepool UA,2060,Hartlepool
+3,        Middlesbrough UA,2820,Middlesbrough
+4,        Northumberland UA,9595,Northumberland
+5,        Redcar and Cleveland UA,2865,Redcar and Cleveland
+6,        Stockton-on-Tees UA,4935,Stockton-on-Tees
+7,            Gateshead,5175,Gateshead
+8,            Newcastle upon Tyne,7550,Newcastle upon Tyne
+9,            North Tyneside,4615,North Tyneside
+10,            South Tyneside,2930,South Tyneside
+11,            Sunderland,5665,Sunderland
+12,        Blackburn with Darwen UA,4490,Blackburn with Darwen
+13,        Blackpool UA,4310,Blackpool
+14,        Cheshire East UA,17550,Cheshire East
+15,        Cheshire West and Chester UA,12250,Cheshire West and Chester
+16,        Halton UA,3175,Halton
+17,        Warrington UA,7250,Warrington
+18,            Allerdale,3540,Allerdale
+19,            Barrow-in-Furness,1945,Barrow-in-Furness
+20,            Carlisle,3795,Carlisle
+21,            Copeland,2055,Copeland
+22,            Eden,2610,Eden
+23,            South Lakeland,5695,South Lakeland
+24,            Bolton,9020,Bolton
+25,            Bury,6725,Bury
+26,            Manchester,15910,Manchester
+27,            Oldham,6435,Oldham
+28,            Rochdale,6030,Rochdale
+29,            Salford,7330,Salford
+30,            Stockport,11670,Stockport
+31,            Tameside,6165,Tameside
+32,            Trafford,10275,Trafford
+33,            Wigan,8450,Wigan
+34,            Burnley,2510,Burnley
+35,            Chorley,4145,Chorley
+36,            Fylde,3335,Fylde
+37,            Hyndburn,2445,Hyndburn
+38,            Lancaster,4405,Lancaster
+39,            Pendle,2740,Pendle
+40,            Preston,5080,Preston
+41,            Ribble Valley,2870,Ribble Valley
+42,            Rossendale,2620,Rossendale
+43,            South Ribble,3900,South Ribble
+44,            West Lancashire,4150,West Lancashire
+45,            Wyre,3980,Wyre
+46,            Knowsley,2695,Knowsley
+47,            Liverpool,12050,Liverpool
+48,            St. Helens,4195,St. Helens
+49,            Sefton,7645,Sefton
+50,            Wirral,8295,Wirral
+51,        East Riding of Yorkshire UA,12335,East Riding of Yorkshire
+52,"        Kingston upon Hull, City of UA",6170,"Kingston upon Hull, City of"
+53,        North East Lincolnshire UA,5065,North East Lincolnshire
+54,        North Lincolnshire UA,5120,North Lincolnshire
+55,        York UA,6530,York
+56,            Craven,2825,Craven
+57,            Hambleton,4035,Hambleton
+58,            Harrogate,8010,Harrogate
+59,            Richmondshire,2080,Richmondshire
+60,            Ryedale,2660,Ryedale
+61,            Scarborough,3950,Scarborough
+62,            Selby,3130,Selby
+63,            Barnsley,5780,Barnsley
+64,            Doncaster,7440,Doncaster
+65,            Rotherham,6395,Rotherham
+66,            Sheffield,15345,Sheffield
+67,            Bradford,14885,Bradford
+68,            Calderdale,7695,Calderdale
+69,            Kirklees,14025,Kirklees
+70,            Leeds,24780,Leeds
+71,            Wakefield,8980,Wakefield
+72,        Derby UA,6955,Derby
+73,        Leicester UA,9765,Leicester
+74,        Nottingham UA,8215,Nottingham
+75,        Rutland UA,1755,Rutland
+76,            Amber Valley,4325,Amber Valley
+77,            Bolsover,1995,Bolsover
+78,            Chesterfield,3295,Chesterfield
+79,            Derbyshire Dales,4090,Derbyshire Dales
+80,            Erewash,3665,Erewash
+81,            High Peak,3710,High Peak
+82,            North East Derbyshire,3205,North East Derbyshire
+83,            South Derbyshire,3300,South Derbyshire
+84,            Blaby,3615,Blaby
+85,            Charnwood,5780,Charnwood
+86,            Harborough,4555,Harborough
+87,            Hinckley and Bosworth,4160,Hinckley and Bosworth
+88,            Melton,2090,Melton
+89,            North West Leicestershire,3920,North West Leicestershire
+90,            Oadby and Wigston,1775,Oadby and Wigston
+91,            Boston,1930,Boston
+92,            East Lindsey,4885,East Lindsey
+93,            Lincoln,2485,Lincoln
+94,            North Kesteven,3570,North Kesteven
+95,            South Holland,2920,South Holland
+96,            South Kesteven,5410,South Kesteven
+97,            West Lindsey,3190,West Lindsey
+98,            Corby,1605,Corby
+99,            Daventry,4055,Daventry
+100,            East Northamptonshire,3595,East Northamptonshire
+101,            Kettering,3365,Kettering
+102,            Northampton,7325,Northampton
+103,            South Northamptonshire,4670,South Northamptonshire
+104,            Wellingborough,3040,Wellingborough
+105,            Ashfield,2900,Ashfield
+106,            Bassetlaw,3560,Bassetlaw
+107,            Broxtowe,3200,Broxtowe
+108,            Gedling,3395,Gedling
+109,            Mansfield,2700,Mansfield
+110,            Newark and Sherwood,4400,Newark and Sherwood
+111,            Rushcliffe,4660,Rushcliffe
+112,        Herefordshire UA,8245,"Herefordshire, County of"
+113,        Shropshire UA,12970,Shropshire
+114,        Stoke-on-Trent UA,6110,Stoke-on-Trent
+115,        Telford and Wrekin UA,4730,Telford and Wrekin
+116,            Cannock Chase,3495,Cannock Chase
+117,            East Staffordshire,4100,East Staffordshire
+118,            Lichfield,4530,Lichfield
+119,            Newcastle-under-Lyme,3485,Newcastle-under-Lyme
+120,            South Staffordshire,4070,South Staffordshire
+121,            Stafford,4720,Stafford
+122,            Staffordshire Moorlands,3385,Staffordshire Moorlands
+123,            Tamworth,2320,Tamworth
+124,            North Warwickshire,2755,North Warwickshire
+125,            Nuneaton and Bedworth,3430,Nuneaton and Bedworth
+126,            Rugby,3935,Rugby
+127,            Stratford-on-Avon,7535,Stratford-on-Avon
+128,            Warwick,7200,Warwick
+129,            Birmingham,30675,Birmingham
+130,            Coventry,8710,Coventry
+131,            Dudley,10045,Dudley
+132,            Sandwell,7780,Sandwell
+133,            Solihull,7610,Solihull
+134,            Walsall,7375,Walsall
+135,            Wolverhampton,6845,Wolverhampton
+136,            Bromsgrove,4510,Bromsgrove
+137,            Malvern Hills,3850,Malvern Hills
+138,            Redditch,2815,Redditch
+139,            Worcester,3155,Worcester
+140,            Wychavon,5880,Wychavon
+141,            Wyre Forest,3715,Wyre Forest
+142,        Bedford UA,6010,Bedford
+143,        Central Bedfordshire UA,11175,Central Bedfordshire
+144,        Luton UA,5290,Luton
+145,        Peterborough UA,5700,Peterborough
+146,        Southend-on-Sea UA,6870,Southend-on-Sea
+147,        Thurrock UA,4585,Thurrock
+148,            Cambridge,4610,Cambridge
+149,            East Cambridgeshire,3645,East Cambridgeshire
+150,            Fenland,3180,Fenland
+151,            Huntingdonshire,7170,Huntingdonshire
+152,            South Cambridgeshire,7335,South Cambridgeshire
+153,            Basildon,6545,Basildon
+154,            Braintree,6305,Braintree
+155,            Brentwood,3840,Brentwood
+156,            Castle Point,3165,Castle Point
+157,            Chelmsford,7135,Chelmsford
+158,            Colchester,6720,Colchester
+159,            Epping Forest,7005,Epping Forest
+160,            Harlow,2500,Harlow
+161,            Maldon,3265,Maldon
+162,            Rochford,3355,Rochford
+163,            Tendring,4355,Tendring
+164,            Uttlesford,4905,Uttlesford
+165,            Broxbourne,3825,Broxbourne
+166,            Dacorum,7275,Dacorum
+167,            East Hertfordshire,7530,East Hertfordshire
+168,            Hertsmere,5950,Hertsmere
+169,            North Hertfordshire,6300,North Hertfordshire
+170,            St Albans,7975,St Albans
+171,            Stevenage,2640,Stevenage
+172,            Three Rivers,4710,Three Rivers
+173,            Watford,4010,Watford
+174,            Welwyn Hatfield,4515,Welwyn Hatfield
+175,            Breckland,4545,Breckland
+176,            Broadland,4560,Broadland
+177,            Great Yarmouth,3070,Great Yarmouth
+178,            King's Lynn and West Norfolk,4920,King's Lynn and West Norfolk
+179,            North Norfolk,3995,North Norfolk
+180,            Norwich,4550,Norwich
+181,            South Norfolk,4910,South Norfolk
+182,            Babergh,3910,Babergh
+183,            Forest Heath,2245,Forest Heath
+184,            Ipswich,3890,Ipswich
+185,            Mid Suffolk,4325,Mid Suffolk
+186,            St Edmundsbury,4265,St Edmundsbury
+187,            Suffolk Coastal,5105,Suffolk Coastal
+188,            Waveney,3715,Waveney
+189,            Camden,25380,Camden
+190,            City of London,15830,City of London
+191,            Hackney,11700,Hackney
+192,            Hammersmith and Fulham,11865,Hammersmith and Fulham
+193,            Haringey,9825,Haringey
+194,            Islington,14095,Islington
+195,            Kensington and Chelsea,12365,Kensington and Chelsea
+196,            Lambeth,11315,Lambeth
+197,            Lewisham,7795,Lewisham
+198,            Newham,6900,Newham
+199,            Southwark,14165,Southwark
+200,            Tower Hamlets,12400,Tower Hamlets
+201,            Wandsworth,15175,Wandsworth
+202,            Westminster,47465,Westminster
+203,            Barking and Dagenham,4190,Barking and Dagenham
+204,            Barnet,20665,Barnet
+205,            Bexley,7165,Bexley
+206,            Brent,12595,Brent
+207,            Bromley,12965,Bromley
+208,            Croydon,12560,Croydon
+209,            Ealing,14240,Ealing
+210,            Enfield,10920,Enfield
+211,            Greenwich,7160,Greenwich
+212,            Harrow,11645,Harrow
+213,            Havering,8155,Havering
+214,            Hillingdon,10235,Hillingdon
+215,            Hounslow,10320,Hounslow
+216,            Kingston upon Thames,7725,Kingston upon Thames
+217,            Merton,9040,Merton
+218,            Redbridge,10095,Redbridge
+219,            Richmond upon Thames,12360,Richmond upon Thames
+220,            Sutton,7230,Sutton
+221,            Waltham Forest,7720,Waltham Forest
+222,        Bracknell Forest UA,4525,Bracknell Forest
+223,        Brighton and Hove UA,12710,Brighton and Hove
+224,        Isle of Wight UA,4745,Isle of Wight
+225,        Medway UA,7365,Medway
+226,        Milton Keynes UA,10315,Milton Keynes
+227,        Portsmouth UA,5620,Portsmouth
+228,        Reading UA,6045,Reading
+229,        Slough UA,4485,Slough
+230,        Southampton UA,6205,Southampton
+231,        West Berkshire UA,8460,West Berkshire
+232,        Windsor and Maidenhead UA,9005,Windsor and Maidenhead
+233,        Wokingham UA,7680,Wokingham
+234,            Aylesbury Vale,8840,Aylesbury Vale
+235,            Chiltern,5955,Chiltern
+236,            South Bucks,5025,South Bucks
+237,            Wycombe,9310,Wycombe
+238,            Eastbourne,3185,Eastbourne
+239,            Hastings,2755,Hastings
+240,            Lewes,4235,Lewes
+241,            Rother,3930,Rother
+242,            Wealden,8125,Wealden
+243,            Basingstoke and Deane,7085,Basingstoke and Deane
+244,            East Hampshire,6410,East Hampshire
+245,            Eastleigh,5015,Eastleigh
+246,            Fareham,4420,Fareham
+247,            Gosport,1970,Gosport
+248,            Hart,4865,Hart
+249,            Havant,4090,Havant
+250,            New Forest,7830,New Forest
+251,            Rushmoor,3255,Rushmoor
+252,            Test Valley,5345,Test Valley
+253,            Winchester,6795,Winchester
+254,            Ashford,5435,Ashford
+255,            Canterbury,5095,Canterbury
+256,            Dartford,3340,Dartford
+257,            Dover,3100,Dover
+258,            Gravesham,3095,Gravesham
+259,            Maidstone,6720,Maidstone
+260,            Sevenoaks,6490,Sevenoaks
+261,            Shepway,3535,Shepway
+262,            Swale,4410,Swale
+263,            Thanet,3675,Thanet
+264,            Tonbridge and Malling,5235,Tonbridge and Malling
+265,            Tunbridge Wells,6175,Tunbridge Wells
+266,            Cherwell,6295,Cherwell
+267,            Oxford,4470,Oxford
+268,            South Oxfordshire,7690,South Oxfordshire
+269,            Vale of White Horse,5515,Vale of White Horse
+270,            West Oxfordshire,5495,West Oxfordshire
+271,            Elmbridge,8290,Elmbridge
+272,            Epsom and Ewell,3310,Epsom and Ewell
+273,            Guildford,7285,Guildford
+274,            Mole Valley,5370,Mole Valley
+275,            Reigate and Banstead,6600,Reigate and Banstead
+276,            Runnymede,4180,Runnymede
+277,            Spelthorne,4270,Spelthorne
+278,            Surrey Heath,4715,Surrey Heath
+279,            Tandridge,4755,Tandridge
+280,            Waverley,7970,Waverley
+281,            Woking,4700,Woking
+282,            Adur,2320,Adur
+283,            Arun,5290,Arun
+284,            Chichester,6310,Chichester
+285,            Crawley,2960,Crawley
+286,            Horsham,6875,Horsham
+287,            Mid Sussex,6865,Mid Sussex
+288,            Worthing,3880,Worthing
+289,        Bath and North East Somerset UA,7900,Bath and North East Somerset
+290,        Bournemouth UA,6535,Bournemouth
+291,        Bristol City of UA,15750,"Bristol, City of"
+292,        Cornwall UA,20015,Cornwall
+293,        Isles of Scilly UA,155,Isles of Scilly
+294,        North Somerset UA,7915,North Somerset
+295,        Plymouth UA,5850,Plymouth
+296,        Poole UA,6180,Poole
+297,        South Gloucestershire UA,9170,South Gloucestershire
+298,        Swindon UA,6155,Swindon
+299,        Torbay UA,4330,Torbay
+300,        Wiltshire UA,20035,Wiltshire
+301,            East Devon,5470,East Devon
+302,            Exeter,4015,Exeter
+303,            Mid Devon,3310,Mid Devon
+304,            North Devon,3915,North Devon
+305,            South Hams,4380,South Hams
+306,            Teignbridge,5160,Teignbridge
+307,            Torridge,2415,Torridge
+308,            West Devon,2310,West Devon
+309,            Christchurch,1970,Christchurch
+310,            East Dorset,4535,East Dorset
+311,            North Dorset,2965,North Dorset
+312,            Purbeck,2000,Purbeck
+313,            West Dorset,4755,West Dorset
+314,            Weymouth and Portland,1950,Weymouth and Portland
+315,            Cheltenham,5100,Cheltenham
+316,            Cotswold,5380,Cotswold
+317,            Forest of Dean,3415,Forest of Dean
+318,            Gloucester,3495,Gloucester
+319,            Stroud,5350,Stroud
+320,            Tewkesbury,3515,Tewkesbury
+321,            Mendip,5065,Mendip
+322,            Sedgemoor,4340,Sedgemoor
+323,            South Somerset,6350,South Somerset
+324,            Taunton Deane,4255,Taunton Deane
+325,            West Somerset,1435,West Somerset
+326,        Isle of Anglesey,2100,Isle of Anglesey
+327,        Gwynedd,4455,Gwynedd
+328,        Conwy,3835,Conwy
+329,        Denbighshire,3195,Denbighshire
+330,        Flintshire,4690,Flintshire
+331,        Wrexham,3860,Wrexham
+332,        Powys,5985,Powys
+333,        Ceredigion,2990,Ceredigion
+334,        Pembrokeshire,4640,Pembrokeshire
+335,        Carmarthenshire,6040,Carmarthenshire
+336,        Swansea,6515,Swansea
+337,        Neath Port Talbot,3115,Neath Port Talbot
+338,        Bridgend,3700,Bridgend
+339,        The Vale of Glamorgan,3925,The Vale of Glamorgan
+340,        Cardiff,10340,Cardiff
+341,        Rhondda Cynon Taff,5170,Rhondda Cynon Taf
+342,        Merthyr Tydfil,1150,Merthyr Tydfil
+343,        Caerphilly,3760,Caerphilly
+344,        Blaenau Gwent,1250,Blaenau Gwent
+345,        Torfaen,2085,Torfaen
+346,        Monmouthshire,3795,Monmouthshire
+347,        Newport,3840,Newport
+348,        Aberdeen City,"8,495",Aberdeen City
+349,        Aberdeenshire,"10,475",Aberdeenshire
+350,        Angus,"3,330",Angus
+351,        Argyll & Bute,"3,400",Argyll and Bute
+352,        Clackmannanshire,"1,140",Clackmannanshire
+353,        Dumfries & Galloway,"4,765",Dumfries and Galloway
+354,        Dundee City,"3,300",Dundee City
+355,        East Ayrshire,"2,760",East Ayrshire
+356,        East Dunbartonshire,"2,875",East Dunbartonshire
+357,        East Lothian,"2,680",East Lothian
+358,        East Renfrewshire,"2,455",East Renfrewshire
+359,        Edinburgh  City of,"16,910",City of Edinburgh
+360,        Eilean Siar,925,Na h-Eileanan Siar
+361,        Falkirk,"3,570",Falkirk
+362,        Fife,"8,755",Fife
+363,        Glasgow City,"17,975",Glasgow City
+364,        Highland,"8,940",Highland
+365,        Inverclyde,"1,660",Inverclyde
+366,        Midlothian,"2,100",Midlothian
+367,        Moray,"2,600",Moray
+368,        North Ayrshire,"3,065",North Ayrshire
+369,        North Lanarkshire,"6,950",North Lanarkshire
+370,        Orkney Islands,825,Orkney Islands
+371,        Perth & Kinross,"5,275",Perth and Kinross
+372,        Renfrewshire,"4,505",Renfrewshire
+373,        Scottish Borders  The,"4,150",Scottish Borders
+374,        Shetland Islands,830,Shetland Islands
+375,        South Ayrshire,"3,270",South Ayrshire
+376,        South Lanarkshire,"8,150",South Lanarkshire
+377,        Stirling,"3,585",Stirling
+378,        West Dunbartonshire,"1,720",West Dunbartonshire
+379,        West Lothian,"4,260",West Lothian
