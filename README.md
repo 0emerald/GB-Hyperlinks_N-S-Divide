@@ -37,7 +37,7 @@ Note: I've called it UK everywhere, but it's actually GB as NI is not included. 
 https://geoportal.statistics.gov.uk/datasets/ons::local-authority-districts-december-2016-generalised-clipped-boundaries-in-the-uk-1/explore?location=53.588449%2C-0.820715%2C5.52
 and does the SVD on the v5 A LADxLAD matrices. Makes the "animationData" and saves this as `animationDataUK.csv`. 
 Second part of the `R` script makes plots: scree plots, 2D reference map plots, embedding plots. 
-* `permutationTestsUK.ipynb` script to run permuation tests. (Also has code to output a `LAD_NorthIndicator_GB_lookup.csv` file, which is copied into *18* and used there)
+* `permutationTestsUK.ipynb` script to run permuation tests for GB. (Also has code to output a `LAD_NorthIndicator_GB_lookup.csv` file, which is copied into *18* and used there)
 * `animations.ipynb` makes some animation data, does some plots of the count of active enterprises data, and outputs the CLEAN version of the active ent data (which is copied to 18 and used in the 1dim Procrustes stuff).
   
 **15-1 WinsorizationPoint:**
