@@ -47,6 +47,7 @@ Note: the below file doesn't transform the A matrices, so is not the results rep
 * `matrixSVD_plots_UK_binaryLog10ConcWins.R` file takes in the LAD level A matrices, then concatenates, logs, then Winsorizes. Then does SVD to calculate embedding, and makes some plots of the embedding and a scree plot, and the file `animationDataGB_ConcWins.csv`.
 * `permutationTestsGB_ConcWins.ipynb` uses the animation data to do the permutation tests for N/S, U/R, L/nL and plots graphs and outputs the values of the p-values. 
 * `transformationsAPlots_GB_ConcWins.R` generates  plots to show the effects of concatenating then Winsorizing the data for GB.
+* `WinsorizationJustification.R` has plots and measures to evaluate for this dataset what an appropriate choice of Winsorization is. 
   
 **18Procrustes:**
 * `ProcrustesGB_X_avg_v2.R` has lots of work in it, makes the plots and does the iterative Procrustes transformation. Does the zoom in on London, as well as doing some X_early and X_late Procrustes transformations. - Think I need to extract this information to then be able to apply the permutation tests on the data. 
