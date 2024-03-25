@@ -124,7 +124,9 @@ V_A = svd_A$v[ ,1:d]
 Y_hat = V_A %*% (D_A)^0.5
 # plot
 plot(Y_hat[1901:2280,1],Y_hat[1901:2280,2],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
-     xlab="Dimension 1", ylab="Dimension 2", main="NO Winsorization, 2010")
+     xlab="Dimension 1", ylab="Dimension 2", main="No Winsorization, 2010")
+plot(Y_hat[1901:2280,3],Y_hat[1901:2280,4],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
+     xlab="Dimension 3", ylab="Dimension 4", main="No Winsorization, 2010")
 
 # Wins (0, 0.99) - plot for 2010
 A_wins <- Winsorize(log10(A_vec_all+1), minval = 0, probs=c(0,0.99))
@@ -138,6 +140,8 @@ Y_hat = V_A %*% (D_A)^0.5
 # plot
 plot(Y_hat[1901:2280,1],Y_hat[1901:2280,2],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
      xlab="Dimension 1", ylab="Dimension 2", main="(0, 0.99) Winsorization, 2010")
+plot(Y_hat[1901:2280,3],Y_hat[1901:2280,4],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
+     xlab="Dimension 3", ylab="Dimension 4", main="(0, 0.99) Winsorization, 2010")
 
 # Wins (0, 0.98) - plot for 2010
 A_wins <- Winsorize(log10(A_vec_all+1), minval = 0, probs=c(0,0.98))
@@ -151,6 +155,8 @@ Y_hat = V_A %*% (D_A)^0.5
 # plot
 plot(Y_hat[1901:2280,1],Y_hat[1901:2280,2],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
      xlab="Dimension 1", ylab="Dimension 2", main="(0, 0.98) Winsorization, 2010")
+plot(Y_hat[1901:2280,3],Y_hat[1901:2280,4],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
+     xlab="Dimension 3", ylab="Dimension 4", main="(0, 0.98) Winsorization, 2010")
 
 # Wins (0, 0.995) - plot for 2010
 A_wins <- Winsorize(log10(A_vec_all+1), minval = 0, probs=c(0,0.995))
@@ -164,6 +170,8 @@ Y_hat = V_A %*% (D_A)^0.5
 # plot
 plot(Y_hat[1901:2280,1],Y_hat[1901:2280,2],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
      xlab="Dimension 1", ylab="Dimension 2", main="(0, 0.995) Winsorization, 2010")
+plot(Y_hat[1901:2280,3],Y_hat[1901:2280,4],col=rgb(Gfull$Xscaled,Gfull$Yscaled,1),pch=19,
+     xlab="Dimension 3", ylab="Dimension 4", main="(0, 0.995) Winsorization, 2010")
 
 
 # Wins (0, 0.999) - plot for 2010 - this just scales 144 things in the concat A raw matrix
@@ -190,3 +198,45 @@ print(ratio_mean_max)
 sorted_l2_norms = sort(l2_norms)
 sorted_l2_norms[ceil(0.9*n*T)] / max_l2_norms # (0.9 is just a choice to say you don't want 90% 
                         #of the data to be really close to the origin and <10% far away right))
+
+
+## THINK ABOUT PROJECTION ONTO AXES AS A MEASURE OF LOCALISATION
+median_angles = c()
+for (i in 1:n*T){
+  x1 = Y_hat[i,1]
+  x2 = Y_hat[i,2]
+  x3 = Y_hat[i,3]
+  x4 = Y_hat[i,4]
+  
+  # Calculate the magnitude of the point
+  magnitude_P <- sqrt(x1^2 + x2^2 + x3^2 + x4^2)
+  
+  # Calculate the angle from each axis
+  theta_1 <- acos(x1 / magnitude_P)
+  theta_2 <- acos(x2 / magnitude_P)
+  theta_3 <- acos(x3 / magnitude_P)
+  theta_4 <- acos(x4 / magnitude_P)
+  # Convert angles from radians to degrees
+  theta_1_deg <- theta_1 * (180 / pi)
+  theta_2_deg <- theta_2 * (180 / pi)
+  theta_3_deg <- theta_3 * (180 / pi)
+  theta_4_deg <- theta_4 * (180 / pi)
+  # modulo them 
+  theta_1_deg_modulo = theta_1_deg %% 90
+  theta_2_deg_modulo = theta_2_deg %% 90
+  theta_3_deg_modulo = theta_3_deg %% 90
+  theta_4_deg_modulo = theta_4_deg %% 90
+  theta_1_deg_modulo <- ifelse(theta_1_deg_modulo > 45, theta_1_deg_modulo - 90, theta_1_deg_modulo)
+  theta_2_deg_modulo <- ifelse(theta_2_deg_modulo > 45, theta_2_deg_modulo - 90, theta_2_deg_modulo)
+  theta_3_deg_modulo <- ifelse(theta_3_deg_modulo > 45, theta_3_deg_modulo - 90, theta_3_deg_modulo)
+  theta_4_deg_modulo <- ifelse(theta_4_deg_modulo > 45, theta_4_deg_modulo - 90, theta_4_deg_modulo)
+  # absolute value
+  theta_1_deg_mod_abs = abs(theta_1_deg_modulo)
+  theta_2_deg_mod_abs = abs(theta_2_deg_modulo)
+  theta_3_deg_mod_abs = abs(theta_3_deg_modulo)
+  theta_4_deg_mod_abs = abs(theta_4_deg_modulo)
+  median_ang = median(c(theta_1_deg_mod_abs, theta_2_deg_mod_abs, theta_3_deg_mod_abs, theta_4_deg_mod_abs))
+  median_angles = c(median_angles, median_ang)
+  
+  # print(c(theta_1_deg_mod_abs, theta_2_deg_mod_abs, theta_3_deg_mod_abs, theta_4_deg_mod_abs))
+}
